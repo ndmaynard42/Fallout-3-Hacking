@@ -4,16 +4,45 @@ using CSC2110::ListArrayIterator;
 #include <iostream>
 using namespace std;
 
+Password::Password()
+{
 
+}
 
+Password::~Password()
+{
 
+}
 
+int getNumMatches(String* curr_word, String* word_guess);
+{
 
+}
 
+void Password::addWord(String* word);
+{
 
+}
 
+void Password::guess(int try_password, int num_matches);
+{
 
+}
 
+int Password::getNumberOfPasswordsLeft();
+{
+
+}
+
+void Password::displayViableWords();
+{
+
+}
+
+String* Password::getOriginalWord(int index);
+{
+
+}
 
 int Password::bestGuess()
 {
@@ -32,7 +61,7 @@ int Password::bestGuess()
       //count up the number of matches between a possible password and a word in the original list
       int* count_num_matches = new int[len + 1];
 
-      for (int i = 0; i < len; i++) 
+      for (int i = 0; i < len; i++)
       {
          count_num_matches[i] = 0;
       }
@@ -49,7 +78,7 @@ int Password::bestGuess()
       //find the largest number in the count_num_matches array
       //the largest number indicates the guess that will generate the most eliminations
       int most_num_matches = 0;
-      for (int j = 0; j < len; j++) 
+      for (int j = 0; j < len; j++)
       {
          int curr_num_matches = count_num_matches[j];
          if (curr_num_matches > most_num_matches)
@@ -67,7 +96,7 @@ int Password::bestGuess()
          best_num_eliminated = num_eliminated;
          best_guess_index = count;
       }
-      
+
       count++;
       delete[] count_num_matches;
    }
