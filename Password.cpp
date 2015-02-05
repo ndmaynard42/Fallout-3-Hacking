@@ -6,12 +6,16 @@ using namespace std;
 
 Password::Password()
 {
+    viable_words = new ListArray<String>();
+    all_words = new ListArray<String>();
+    len = 0;
 
 }
 
 Password::~Password()
 {
-
+    delete viable_words;
+    delete all_words;
 }
 
 int getNumMatches(String* curr_word, String* word_guess);
@@ -21,7 +25,12 @@ int getNumMatches(String* curr_word, String* word_guess);
 
 void Password::addWord(String* word);
 {
+    if (len == 0)
+    {
+        len = word -> length();
+    }
 
+    temporary =
 }
 
 void Password::guess(int try_password, int num_matches);
