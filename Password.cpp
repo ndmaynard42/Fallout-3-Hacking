@@ -43,7 +43,13 @@ void Password::addWord(String* word);
         len = word -> length();
     }
 
-    temporary =
+    temp_len = word -> length();
+
+    if(len == temp_len)
+    {
+        viable_words -> add(word);
+        all_words -> add(word);
+    }
 }
 
 void Password::guess(int try_password, int num_matches);
